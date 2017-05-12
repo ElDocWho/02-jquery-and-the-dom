@@ -11,7 +11,7 @@ function Article (rawDataObj) {
   this.body = rawDataObj.body;
 }
 
-// console.log(articles);
+
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   /* TODO: This cloned article still has a class of template.
@@ -53,7 +53,7 @@ rawData.forEach(function(articleObject) {
   // REVIEW: Take a look at this forEach method; This may be the first time we've seen it.
   articles.push(new Article(articleObject));
 });
-console.log(articles);
+
 articles.forEach(function(article) {
   $('#articles').append(article.toHtml());
 });
